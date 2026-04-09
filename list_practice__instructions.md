@@ -45,9 +45,9 @@ Enter a name (or blank to stop):
 author:
 date:
 Practicing with lists
-"""
+float"""
 
-def roll_dice() -> int:
+def roll_dice() -> float:
     """
     TODO: write docstring
     """
@@ -83,4 +83,7 @@ def main():
 
     # Output
     # TODO: print the dice average and john average
+
+if __name__ == "__main__":
+    main()
 ```
