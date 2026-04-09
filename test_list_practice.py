@@ -10,6 +10,15 @@ def test_header_comments():
     assert "date:" in source, "Missing 'date:' in header comments"
 
 
+def test_roll_dice_docstring():
+    """Test that roll_dice() has a completed docstring (not just TODO)."""
+    docstring = list_practice.roll_dice.__doc__
+    assert docstring is not None, "roll_dice() is missing a docstring"
+    assert "TODO" not in docstring, "roll_dice() docstring still contains TODO"
+    assert len(docstring.strip()) > 20, "roll_dice() docstring is too short"
+    assert "return" in docstring.lower(), "roll_dice() docstring should describe what it returns"
+
+
 def test_count_john_basic():
     """Test count_john() returns correct percentage with a mix of names."""
     assert list_practice.count_john(["sara", "abc", "john"]) == 33.3
